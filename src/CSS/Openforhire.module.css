@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap');
+
+.openforhire{
+    position: relative;
+    height:100%;
+    background: linear-gradient(90deg, #000000 10.96%, rgba(0, 0, 0, 0) 100%);
+    min-height: 100vh;
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+}
+.form h1{
+    font-size: 18px;
+  font-weight: 743;
+  font-family: "Big Shoulders", sans-serif;
+  color:rgba(255, 255, 255, 1);
+}
+.image{
+    width: 76%;
+    height: 178vh;
+    margin-left: 250px;
+    margin-top: -217px;
+}
+.form{
+    position:absolute;
+    width:500px;
+    height:auto;
+    padding:20px;
+    left:50px;
+    top:50px;
+    
+   
+}
+form{
+    width:400px;
+    height:auto;
+    padding:20px;
+    background: rgba(232, 74, 74, 0.09);
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    margin-top:20px;
+    backdrop-filter: blur(12px);
+    border-radius:8px;
+     display:flex;
+  flex-direction: column;
+  gap:20px;
+}
+.form label{
+  font-size: 18px;
+  font-weight: 743;
+  font-family: "Big Shoulders", sans-serif;
+  color:rgba(232, 74, 74, 1);
+ 
+}
+.name{
+    display:flex;
+    width:100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:10px;
+}
+.subhead{
+    font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: "Iceland", sans-serif;
+  color:rgba(178, 183, 186, 1);
+}
+.name input{
+    width:100%;
+    background: rgba(1, 1, 3, 1);
+    border: 1px solid rgba(51, 51, 51, 1);
+    padding:10px 7px;
+     font-size: 14px;
+  font-weight: 400;
+  font-family: "Iceland", sans-serif;
+  color:rgba(122, 122, 122, 1);
+}
+.name textarea{
+    width:100%;
+    min-height:200px;
+    background: rgba(1, 1, 3, 1);
+    border: 1px solid rgba(51, 51, 51, 1);
+    padding:10px 7px;
+     font-size: 14px;
+  font-weight: 400;
+  font-family: "Iceland", sans-serif;
+  color:rgba(122, 122, 122, 1);
+}

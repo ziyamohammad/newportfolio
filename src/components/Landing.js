@@ -1,10 +1,13 @@
 import { Bluetooth, Check, Plus, X } from "lucide-react";
 import styles from "../CSS/Landing.module.css";
 import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router";
 
 export default function Landing() {
       const [soundOn, setSoundOn] = useState(true);
   const [musicOn, setMusicOn] = useState(false);
+  const navigate = useNavigate()
+  
 
   const musicRef = useRef(null);
 
@@ -26,6 +29,8 @@ export default function Landing() {
     audio.volume = 0.4;
     audio.play();
   };
+
+ 
 
   return (
     <div className={styles.container}>
@@ -68,7 +73,7 @@ export default function Landing() {
             </div>
             <div className={styles.name}>
                <span className={styles.label}>AVAILABILITY</span>
-               <span className={styles.status}>OPEN FOR HIRE</span>
+               <span className={styles.status} onClick={()=>navigate("/openforhire")} >OPEN FOR HIRE</span>
             </div>
             <div className={styles.name}>
                <span className={styles.label}>SOCIAL</span>
@@ -76,10 +81,7 @@ export default function Landing() {
             </div>
         </div>
 
-          <div className={styles.motto}>
-            <p>MOTTO:</p>
-            <span>SPERO OMNUS NEQUE NUMQUAM RECUASANDA LAUDANTIUM.</span>
-          </div>
+          
         </div>
 
         {/* Center Panel */}
@@ -155,18 +157,8 @@ export default function Landing() {
         </div>
       </div>
 
-    </div>
+          </div>
         </div>
       </div>
-
-      {/* Bottom Tabs */}
-      <div className={styles.bottomTabs}>
-        <button className={styles.active}>BEGINNING</button>
-        <button>LOGS</button>
-        <button>ACHIEVEMENTS</button>
-        <button>CREATIONS</button>
-        <button>GAMES</button>
-      </div>
     </div>
-  );
-}
+  )}

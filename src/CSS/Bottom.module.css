@@ -1,0 +1,77 @@
+.bottomTabs {
+  display: flex;
+  justify-content: center;
+  
+  margin-bottom:30px;
+  padding: 12px;
+}
+.boxp{
+    font-size: 13px;
+  font-size: 10px;
+  font-weight: 400;
+  max-width: 160px;
+  background-color: rgba(51, 51, 51, 1);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
+  font-family: "Big Shoulders", sans-serif;
+  padding: 5px;
+}
+.box{
+    width:200px;
+     border-left:5px solid rgba(232, 74, 74, 1) ;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.active{
+background: rgba(232, 74, 74, 1) ;
+width:82%;
+position: relative;
+display:flex;
+align-items: flex-start;
+padding:2px 5px;
+padding-right:0px;
+  font-size: 18px;
+  font-weight: 743;
+  
+  color: black;
+  font-family: "Big Shoulders", sans-serif;
+}
+.normal{
+background: rgba(36, 36, 37, 1);
+width:82%;
+position: relative;
+display:flex;
+align-items: flex-start;
+padding:2px 5px;
+padding-right:0px;
+  font-size: 18px;
+  font-weight: 743;
+  
+  color: black;
+  font-family: "Big Shoulders", sans-serif;
+}
+.active::after,
+.normal::after{
+  content:"";
+  position:absolute;
+  right:-12px;
+  top:0;
+  height:100%;
+  width:60px;
+
+  background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="70" viewBox="0 0 120 70"><g stroke="black" stroke-width="4" fill="none"><polygon points="30,5 60,5 75,30 60,55 30,55 15,30"/><polygon points="75,30 105,30 120,55 105,80 75,80 60,55"/><polygon points="75,-20 105,-20 120,5 105,30 75,30 60,5"/></g></svg>');
+  
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:center;
+}
+
+.bottomTabs button {
+  border: none;
+  color: white;
+  padding: 3px 9px;
+  cursor: pointer;
+}
+
