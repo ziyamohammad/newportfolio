@@ -22,12 +22,13 @@
   display: flex;
   gap: 30px;
   padding: 15px 32px;
+  align-items: center;
   
 }
 .levelandplus{
     display:flex;
     align-items: center;
-    width:15%;
+    width:180px;
     justify-content: space-between;
 
 }
@@ -454,6 +455,7 @@ font-size: 13px;
  .profileInfo{
   flex-direction: row;
   flex-wrap: wrap;
+  margin-top:15px;
  }
  /* .avatar{
   width:350px;
@@ -465,6 +467,21 @@ font-size: 13px;
   }
   .caption{
     font-size: 15px;
+  }
+}
+@media screen and (max-width:505px){
+  .levelandplus{
+    width:90px;
+  }
+  .level{
+    font-size: 16px;
+  }
+  .level span{
+    font-size: 13px;
+  }
+  .icon{
+    border:none;
+    padding:none;
   }
 }
 

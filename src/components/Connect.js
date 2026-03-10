@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 import styles from "../CSS/Openforhire.module.css";
 
-const Openforhire = () => {
+const Connect = () => {
     const[name,setName]=useState("")
     const[email,setEmail]=useState("")
     const[text,setText]=useState("")
   return (
     <div className={styles.openforhire}>
         <div className={styles.form}>
-           <h1>OPEN FOR HIRE</h1>
-           <span className={styles.subhead}>I would love to hear about your projects!</span>
+           <h1>CONNECT WITH ME</h1>
+           <span className={styles.subhead}>wanna chat? Or just share something cool?</span>
            <form>
             <div className={styles.name}>
                 <label>HOW SHOULD I CALL YOU</label>
@@ -37,4 +37,4 @@ const Openforhire = () => {
   )
 }
 
-export default Openforhire
+export default Connect

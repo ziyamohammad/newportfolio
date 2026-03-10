@@ -77,7 +77,7 @@ export default function Landing() {
             </div>
             <div className={styles.name}>
                <span className={styles.label}>SOCIAL</span>
-               <button className={styles.connect}>OPEN CONNECTION <Bluetooth color="red" size={20}/></button>
+               <button className={styles.connect} onClick={()=>navigate("/connect")} >OPEN CONNECTION <Bluetooth color="red" size={20}/></button>
             </div>
         </div>
 

@@ -6,6 +6,7 @@ import Bottom from './components/Bottom';
 import { Plus, X } from 'lucide-react';
 import { BrowserRouter as Router , Routes,Route, useLocation } from 'react-router-dom';
 import Openforhire from './components/Openforhire';
+import Connect from './components/Connect';
 
 function AppContent() {
 
@@ -21,9 +22,10 @@ function AppContent() {
   <Routes>
     <Route path="/" element={<Landing/>}/>
     <Route path="/openforhire" element={<Openforhire/>}/>
+    <Route path="/connect" element={<Connect/>}/>
   </Routes>
 
-  {location.pathname !== "/openforhire" && (
+  {(location.pathname !== "/openforhire" && location.pathname !== "/connect") && (
     isMobileView ? (
       <div className="mobileBottomNav">
 
@@ -44,7 +46,7 @@ function AppContent() {
             NAVIGATE {menuOpen ? <X size={14}/> : <Plus size={14}/>}
           </button>
 
-          <button className="navButton">
+          <button className="navButton1">
             ABOUT
           </button>
         </div>
