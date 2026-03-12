@@ -3,14 +3,11 @@ import styles from "../CSS/Landing.module.css";
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router";
 
-export default function Landing() {
-      const [soundOn, setSoundOn] = useState(true);
+export default function Landing({active}) {
+  const [soundOn, setSoundOn] = useState(true);
   const [musicOn, setMusicOn] = useState(false);
   const navigate = useNavigate()
-  
-
   const musicRef = useRef(null);
-
   useEffect(() => {
     if (!musicRef.current) return;
 
@@ -43,13 +40,13 @@ export default function Landing() {
         </div>
         <div className={styles.level}>1425 <span>COINS AWARDED</span></div>
       </div>
-
-      <div className={styles.main}>
+      
+        <div className={styles.main}>
 
         {/* Left Panel */}
         <div className={styles.leftPanel}>
           <div className={styles.avatar}>
-  <img src="/Landingimg1.png" alt="" />
+  <img src="/Landingimg1.png" alt=""  onClick={()=>{navigate("/about")}} />
 
   <span className={`${styles.corner} ${styles.topLeft}`}></span>
   <span className={`${styles.corner} ${styles.topRight}`}></span>
@@ -85,6 +82,7 @@ export default function Landing() {
         </div>
 
         {/* Center Panel */}
+        {active === "beginning" && (
         <div className={styles.centerPanel}>
             <div className={styles.caption}>
            BUILDING SCALABLE WEB APPLICATIONS AND INTELLIGENT SYSTEMS,
@@ -99,6 +97,8 @@ export default function Landing() {
 
           
         </div>
+
+        )}
 
         {/* Right Panel */}
         <div className={styles.rightPanel}>
@@ -160,5 +160,7 @@ export default function Landing() {
           </div>
         </div>
       </div>
+
+      
     </div>
   )}

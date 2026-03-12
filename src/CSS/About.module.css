@@ -1,0 +1,107 @@
+/* about section */
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap');
+
+.about{
+  display: flex;
+  flex-direction: column;
+  padding:10px 20px;
+  background: linear-gradient(90deg, #020104 0%, #2b0e12 51.92%, #020104 100%);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  height:auto;
+  overflow-y: auto;
+  
+}
+.abouthead{
+    color:white;
+  text-align: center;
+  font-family: "Iceland", sans-serif;
+font-weight: 400;
+font-size: 28px;
+text-transform: uppercase;
+margin:20px 0px;
+
+}
+.quesans{
+  display:flex;
+ 
+  justify-content: center;
+  align-items: flex-start;
+  gap:15px;
+  width:100%;
+  margin-bottom:20px;
+  
+}
+.question{
+  font-family: "Iceland", sans-serif;
+font-weight: 400;
+font-size: 20px;
+text-transform: uppercase;
+width:30%;
+color:rgba(122, 122, 122, 1);
+}
+.ans{
+ width:70%; 
+   font-family: "Iceland", sans-serif;
+font-weight: 400;
+font-size: 18px;
+text-transform: uppercase;
+color:rgba(255, 255, 255, 1)  ;
+}
+.maincontent{
+  width:100%;
+  display:flex;
+  gap:20px;
+  justify-content: center;
+
+}
+.allquestion{
+  width:55%;
+  display:flex;
+  flex-direction: column;
+}
+.aboutimage{
+  width:500px;
+  height:600px;
+  
+  border-radius: 10px;
+  overflow: hidden;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width:1100px) {
+    .quesans{
+        flex-direction: column;
+    }
+    .question{
+        width:100%;
+    }
+    .ans{
+        width:100%;
+    }
+    .maincontent{
+        margin-bottom: 50px;
+    }
+}
+@media screen and (max-width:768px){
+    .maincontent{
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    .allquestion{
+        width:100%;
+    }
+    .aboutimage{
+        width:30%;
+        height:20%;
+    }
+}
+@media screen and (max-width:425px){
+   .aboutimage{
+        width:150px;;
+        height:180px;
+    }
+}
+
