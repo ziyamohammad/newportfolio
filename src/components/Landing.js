@@ -2,6 +2,8 @@ import { Bluetooth, Check, Plus, X } from "lucide-react";
 import styles from "../CSS/Landing.module.css";
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function Landing({active}) {
   const [soundOn, setSoundOn] = useState(true);
@@ -27,6 +29,90 @@ export default function Landing({active}) {
     audio.play();
   };
 
+
+  //experience
+
+  gsap.registerPlugin(ScrollTrigger)
+
+const [active1,setActive1] = useState("experience")
+
+const cardsRef = useRef([])
+
+useEffect(()=>{
+
+cardsRef.current.forEach((card,i)=>{
+
+gsap.fromTo(card,
+{
+opacity:0,
+y:80
+},
+{
+opacity:1,
+y:0,
+duration:0.8,
+delay:i*0.2,
+scrollTrigger:{
+trigger:card,
+start:"top 85%",
+toggleActions:"play none none reverse"
+}
+})
+
+})
+
+},[active1])
+
+
+const experience = [
+  {
+    title: "Technical Lead Developer",
+    company: "NoCapCode™",
+    date: "Jan 2026 - Present",
+    logo: "/NCC.png",
+    desc: "Building scalable React interfaces and realtime apps."
+  },
+  {
+    title: "Full Stack Intern",
+    company: "Humanity Founders",
+    date: "Oct 2025 - Jan 2026",
+    logo: "/humanity.png",
+    desc: "Developed full stack applications using MERN stack."
+  },
+  {
+    title: "Frontend Developer",
+    company: "Machine Learning Centre of Excellence",
+    date: "Sep 2024 - Present",
+    logo: "/logo.png",
+    desc: "Created responsive UI with GSAP animations."
+  }
+]
+
+const education = [
+  {
+    title: "B.Tech CSIT",
+    company: "Ajay Kumar Garg Engineering College",
+    date: "2023 - 2027",
+    logo: "/akgec.png",
+    desc: "Computer Science and Information Technology"
+  },
+  {
+    title: "Class 12",
+    company: "Dr Virendra Swarup Education Centre",
+    date: "2022",
+    logo: "/vsec.png",
+    desc: "CBSE Board"
+  },
+  {
+    title: "Class 10",
+    company: "Dr Virendra Swarup Education Centre",
+    date: "2020",
+    logo: "/vsec.png",
+    desc: "100/100 in Mathematics"
+  }
+]
+
+const data = active1==="experience"?experience:education
  
 
   return (
@@ -97,6 +183,54 @@ export default function Landing({active}) {
 
           
         </div>
+
+        )}
+
+        {active === "achievements" && (
+     <section className={styles.wrapper}>
+
+<h2 className={styles.heading}>EXPERIENCE & EDUCATION</h2>
+
+<div className={styles.toggle}>
+
+<button
+className={`${styles.tab} ${active1==="experience" ? styles.active : ""}`}
+onClick={()=>setActive1("experience")}
+>
+EXPERIENCE
+</button>
+
+<button
+className={`${styles.tab} ${active1==="education" ? styles.active : ""}`}
+onClick={()=>setActive1("education")}
+>
+EDUCATION
+</button>
+
+</div>
+
+
+{data.map((item,index)=>{
+  return(
+    <div className={styles.experience}>
+       <div className={styles.explogo}>
+           <div className={styles.companylogo}>
+            <img src = {item.logo} alt="/" height="100%" width="100%"/>
+           </div>
+           <div className={styles.tag}>{index===0?"LEGENDARY":"EPIC"}</div>
+       </div>
+       <div className={styles.expcontent}>
+         <span className={styles.jobtitle}>{item.title}</span>
+         <span className={styles.companyname}>{item.company}</span>
+         <span className={styles.desc}>{item.desc}</span>
+         <span className={styles.date}>{item.date}</span>
+       </div>
+    </div>
+  )
+
+})}
+
+     </section>
 
         )}
 

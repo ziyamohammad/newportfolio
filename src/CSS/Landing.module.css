@@ -486,4 +486,232 @@ font-size: 13px;
   }
 }
 
+/* //Experience */
 
+.wrapper{
+height:80vh;
+padding:20px 0;
+background: radial-gradient(circle at center,#300000,#070707 70%);
+color:white;
+overflow: auto;
+display: flex;
+flex-direction: column;
+scrollbar-width: none;
+align-items: center;
+/* justify-content: center; */
+
+}
+
+.heading{
+ font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 2px;
+  color:white;
+  font-family: "Iceland", sans-serif;
+  margin-bottom: 20px;
+}
+
+.toggle{
+
+display:flex;
+justify-content:center;
+margin-bottom:80px;
+
+}
+
+.tab{
+
+position:relative;
+font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 2px;
+  color:white;
+  font-family: "Big Shoulders", sans-serif;
+
+padding:8px 25px;
+
+color:#aaa;
+
+font-weight:700;
+
+letter-spacing:2px;
+
+background:#1a0505;
+
+border:1px solid #3d1a1a;
+
+cursor:pointer;
+
+
+transition:all .3s;
+
+}
+.tab:hover{
+
+color:white;
+
+}
+
+/* ACTIVE TAB */
+
+.active{
+
+color:white;
+
+background:linear-gradient(
+180deg,
+#ff3b3b,
+#9b1c1c
+);
+
+border:1px solid #ff3b3b;
+
+box-shadow:0 0 10px rgba(255,60,60,.7);
+
+}
+
+/* triangle indicator */
+
+.active::after{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+
+transform:translateX(-50%);
+
+bottom:-10px;
+
+width:0;
+height:0;
+
+border-left:8px solid transparent;
+border-right:8px solid transparent;
+border-top:10px solid #ff3b3b;
+
+}
+.experience{
+  display:flex;
+  align-items: center;
+  height: auto;
+  width:80%;
+  border:1px solid #362123;
+  margin-bottom:20px;
+  border-radius: 10px;
+}
+.experience:hover{
+  border:1px solid #42642E;
+  transform: scale(10px);
+  background:linear-gradient(
+90deg,
+rgba(2, 1, 4,0),
+rgba(204, 207, 97,0.2)
+);
+}
+.explogo{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  width:120px;
+  height:100%;
+  padding-top:40px;
+  justify-content: space-between;
+}
+.companylogo{
+  width: 30%;
+}
+.expcontent{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  padding:15px 0px;
+  
+}
+.jobtitle{
+  font-family: "Big Shoulders", sans-serif;
+font-weight: 743;
+font-size: 18px;
+letter-spacing: 2px;
+text-transform: uppercase;
+color:rgba(232, 74, 74, 1);
+
+}
+.experience:hover .jobtitle {
+  color: #E8BB4A;
+  
+}
+.tag{
+   font-family: "Iceland", sans-serif;
+font-weight: 600;
+font-size: 16px;
+letter-spacing: 2px;
+text-transform: uppercase;
+background-color:rgba(232, 74, 74, 1);
+color: black;
+width:100%;
+text-align: center;
+padding:5px 10px;
+}
+.experience:hover .tag{
+  background-color: rgba(232, 187, 74, 1);
+  box-shadow: 0px 0px 14px 0px rgba(125, 255, 104, 1);
+
+}
+.companyname{
+  font-family: "Big Shoulders", sans-serif;
+font-weight: 400;
+font-size: 16px;
+letter-spacing: 1px;
+text-transform: uppercase;
+margin-bottom:10px;
+
+}
+.desc{
+   font-family: "Iceland", sans-serif;
+font-weight: 400;
+font-size: 16px;
+letter-spacing: 1px;
+text-transform: uppercase;
+margin-bottom:10px;
+}
+.date{
+   font-family: "Iceland", sans-serif;
+font-weight: 400;
+font-size: 16px;
+letter-spacing: 1px;
+text-transform: uppercase;
+margin-bottom:10px;
+margin-bottom:-15px;
+background-color: #362123;
+display: block;
+position: relative;
+padding:5px 10px;
+
+}
+.experience:hover .date {
+  background-color: rgba(204, 207, 97,0.2);
+  
+}
+@media screen and (max-width:1050px){
+  .wrapper{
+    width:100%;
+  }
+}
+@media screen and (max-width:500px){
+  .experience{
+    flex-direction: column;
+  }
+  .tag{
+    display: none;
+  }
+  .jobtitle ,.companyname ,.desc{
+    padding-left: 10px;
+  }
+  .explogo{
+    padding-top: 20px;
+  }
+}
